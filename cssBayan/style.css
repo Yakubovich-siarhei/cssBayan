@@ -34,7 +34,7 @@
 .accordion-container input{
     display: none;
 }
-.accordion-container section{
+.accordion-container .accordion{
     background: rgba(255, 255, 255, 0.5);
     overflow: hidden;
     height: 0;
@@ -43,13 +43,13 @@
     transition: 
         height 0.3s ease-in-out, 
 }
-.accordion-container input:checked ~ section,
-.accordion-container input:hover ~ section {
+.accordion-container input:checked ~ .accordion,
+.accordion-container input:hover ~ .accordion{
     transition: 
         height 0.5s ease-in-out
 }
-.accordion-container input:checked ~ section.accordion,
-.accordion-container input:hover ~ section.accordion {
+.accordion-container input:checked ~ .accordion,
+.accordion-container input:hover ~ .accordion {
     height: 17em;
 }
 .kitten{
