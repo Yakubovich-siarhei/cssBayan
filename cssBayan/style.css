@@ -1,58 +1,76 @@
 
-.accordion-container {
-    width: 30em;
-    margin: 0 auto;
-    color: rgb(20, 20, 184);
-}
+/* @media  (max-width: 320px ) {   */
+    .accordion-container {
+        padding-top: 1em;
+        margin: 1em;
+        width: 40em;
+        margin: 0 auto;
+        color: rgb(20, 20, 184);
+    }
 
-.accordion-container:hover {
-    color: rgb(10, 10, 10);
-}
+    .accordion-container:hover {
+        color: rgb(10, 10, 10);
+    }
 
-.accordion-container label {
-    position: relative;
-    z-index: 20;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1em;
-    cursor: pointer;
-    line-height: 1.2;
-    font-size: 1.5em;
-    background: rgb(238,238,238); 
-}
+    .wrapper_item {
+        margin: 0 1em;
+    }
 
-.accordion-container label:hover{
-    background: #fff;
-}
-.accordion-container input:checked + label,
-.accordion-container input:checked + label:hover{
-    background: #fff;
-    color: #3d7489;
-}
+    .accordion_label {
+        display: flex;
+        flex-direction: column;
+        height: 1em;
+        cursor: pointer;
+        line-height: 1.2;
+        font-size: 1.5em;
+        background: rgb(247, 241, 241); 
+    }
 
-.accordion-container input{
-    display: none;
-}
-.accordion-container .accordion{
-    background: rgba(255, 255, 255, 0.5);
-    overflow: hidden;
-    height: 0;
-    position: relative;
-    z-index: 10;
-    transition: 
-        height 0.3s ease-in-out, 
-}
-.accordion-container input:checked ~ .accordion,
-.accordion-container input:hover ~ .accordion{
-    transition: 
-        height 0.5s ease-in-out
-}
-.accordion-container input:checked ~ .accordion,
-.accordion-container input:hover ~ .accordion {
-    height: 17em;
-}
-.kitten{
-    max-width:100%;
-    height:auto;
-}
+    .accordion_label:hover{
+        background: rgb(255, 255, 255);
+    }
+    .accordion_head:checked + .accordion_label,
+    .accordion_head:checked + .accordion_label:hover{
+        background: rgb(255, 255, 255);
+        color: #3d7489;
+    }
+
+    .accordion_head {
+        display: none;
+    }
+
+    .accordion-container .accordion{
+        background: rgba(255, 255, 255, 0.5);
+        overflow: hidden;
+        height: 0;
+        transition: 
+            height 0.3s ease-in-out, 
+    }
+
+    .accordion_head:checked ~ .accordion,
+    .accordion_head:hover ~ .accordion,
+    .accordion:hover
+     {  
+        transition: height 0.5s ease-in-out;
+        height: 17em;
+    }
+
+    .accordion_label:hover  .accordion_input_img img,
+    .accordion_head:checked ~ .accordion_input_img img {  
+        transition: height 0.5s ease-in-out;
+        height: 10em;
+        width: 17em;
+    }
+
+    .accardion_img {
+        max-width:100%;
+        height:auto;
+    }
+
+    .accordion_input_img img {
+        height: 0em;
+        width: 0em;
+    }
+
+
+/* } */
