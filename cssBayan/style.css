@@ -19,9 +19,8 @@
     .accordion_label {
         display: flex;
         flex-direction: column;
-        height: 1em;
         cursor: pointer;
-        line-height: 1.2;
+        line-height: 0.6;
         font-size: 1.5em;
         background: rgb(247, 241, 241); 
     }
@@ -43,28 +42,25 @@
         background: rgba(255, 255, 255, 0.5);
         overflow: hidden;
         height: 0;
-        transition: 
-            height 0.3s ease-in-out, 
+        transition: height 0.3s ease-in-out, 
     }
 
-    .accordion_head:checked ~ .accordion,
-    .accordion_head:hover ~ .accordion,
-    .accordion:hover
+    .accordion_head:checked ~ .accordion_label,
+    .accordion_head:hover ~ .accordion_label
      {  
         transition: height 0.5s ease-in-out;
         height: 17em;
     }
 
-    .accordion_label:hover  .accordion_input_img img,
-    .accordion_head:checked ~ .accordion_input_img img {  
+    .accordion_head:checked ~ .accordion_input_img img,
+    .accordion_head:hover ~ .accordion_input_img img {  
         transition: height 0.5s ease-in-out;
-        height: 10em;
-        width: 17em;
+        height:10em;
+        width:18em;
     }
 
-    .accardion_img {
-        max-width:100%;
-        height:auto;
+    .accordion_input_img {
+        margin: 0 auto;
     }
 
     .accordion_input_img img {
