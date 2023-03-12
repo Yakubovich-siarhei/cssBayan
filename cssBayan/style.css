@@ -1,0 +1,58 @@
+
+.accordion-container {
+    width: 30em;
+    margin: 0 auto;
+    color: rgb(20, 20, 184);
+}
+
+.accordion-container:hover {
+    color: rgb(10, 10, 10);
+}
+
+.accordion-container label {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1em;
+    cursor: pointer;
+    line-height: 1.2;
+    font-size: 1.5em;
+    background: rgb(238,238,238); 
+}
+
+.accordion-container label:hover{
+    background: #fff;
+}
+.accordion-container input:checked + label,
+.accordion-container input:checked + label:hover{
+    background: #fff;
+    color: #3d7489;
+}
+
+.accordion-container input{
+    display: none;
+}
+.accordion-container section{
+    background: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    z-index: 10;
+    transition: 
+        height 0.3s ease-in-out, 
+}
+.accordion-container input:checked ~ section,
+.accordion-container input:hover ~ section {
+    transition: 
+        height 0.5s ease-in-out
+}
+.accordion-container input:checked ~ section.accordion,
+.accordion-container input:hover ~ section.accordion {
+    height: 17em;
+}
+.kitten{
+    max-width:100%;
+    height:auto;
+}
