@@ -49,13 +49,13 @@
 
 .accordion_head:checked + .accordion_label,
 .accordion_head:hover + .accordion_label
-{  
+{
     transition: height 0.5s ease-in;
     height: 17em;
 }
 
 .accordion_head:hover ~ .accordion_input_img img,
-.accordion_head:checked ~ .accordion_input_img img {  
+.accordion_head:checked ~ .accordion_input_img img {
     transition: height 0.5s ease-in;
     height:10em;
     width:18em;
@@ -70,18 +70,27 @@
 
 .accordion_input_img {
     margin: 0 auto;
-    padding-top: 1.2em;
+    margin-top: 1.2em;
 }
 
 .accordion_input_img img {
-    transition: 
+    transition:
         height 0.3s ease-in,
         width 0.3s ease-in;
     height: 0em;
     width: 0em;
 }
 
-@media  (max-width: 320px ) { 
+.accordion_input_img {
+    box-shadow: 0;
+    transition: box-shadow 0.5s;
+}
+
+.accordion_input_img:hover {
+    box-shadow: 0.5em -0.2em 0.2em rgb(190, 188, 188);
+}
+
+@media  (max-width: 320px ) {
     * ,
     body,
     .accordion-container {
